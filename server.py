@@ -40,7 +40,7 @@ class S(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         print(self.headers.get("Gift"))
         self.end_headers()
-        self.wfile.write(f'Thanks for your {self.headers.get("Gift")}'.encode('UTF-8'))
+        self.wfile.write(f'Thanks for your {self.headers.get("Gift")}!'.encode('UTF-8'))
 
 
 def run(server_class=HTTPServer, handler_class=S, port=2020):
